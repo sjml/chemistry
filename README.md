@@ -4,7 +4,7 @@ These are a series of scripts to install specific chemical analysis software on 
 
 But if you have trouble with installation from any of these scripts, open an issue or something. 
 
-You can run these scripts automatically by opening the Terminal app (in `/Applications/Utilities`) and pasting the lines from the various sections below. Or, if you don’t like piping the internet directly into your shell, you can download this repository and run them directly. 
+You can run these scripts automatically by opening the Terminal app (in `/Applications/Utilities`) and pasting the lines from the various sections below. Or, if you don’t like piping the internet directly into your shell, you can [download this repository](https://github.com/sjml/chemistry/archive/master.zip) and run them directly. 
 
 ## Installing SHELX
 
