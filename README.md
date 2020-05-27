@@ -1,6 +1,6 @@
 # SJML’s chemistry scripts 
 
-These are a series of scripts to install specific chemical analysis software on your Mac. Please note that I am in no way involved with making the software and cannot support problems with using it. I am not even a chemist, so probably won’t understand the question. 
+These are a series of scripts to install specific chemical analysis software on your Mac. Please note that I am in no way involved with making the software and cannot support problems with using it. I am not even a chemist, so probably won’t understand the question. I do have a friend who is a chemist though, which is why I host these scripts.
 
 But if you have trouble with installation from any of these scripts, open an issue or something. 
 
