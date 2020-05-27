@@ -8,7 +8,7 @@ You can run these scripts automatically by opening the Terminal app (in `/Applic
 
 ## Installing SHELX
 
-Note that before you run this script, you’ll need to have registered yourself at the [SHELX site](http://shelx.uni-goettingen.de/register.php) (note that this is free for academics). Have the username and password they email you handy because you’ll need to put it in the script. 
+Note that before you run this script, you’ll need to have registered yourself at the [SHELX site](http://shelx.uni-goettingen.de/register.php) (this is free for academics). Have the username and password they email you handy because you’ll need to put it in the script. 
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry/master/install/shelx.sh)"
