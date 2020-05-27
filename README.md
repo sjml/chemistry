@@ -9,13 +9,13 @@ You can run these scripts automatically by opening the Terminal app (in `/Applic
 ## Installing SHELX
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry-scripts/master/install/shelx.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry/master/install/shelx.sh)"
 ```
 
 ## Installing Platon
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry-scripts/master/raw/install/platon.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry/master/raw/install/platon.sh)"
 ```
 
 Note that it will ask for your password, so stick around. It may look like it’s frozen at a few points, but that’s just because installing Xquartz and compiling stuff takes a bit of time. After it’s done, open up an Xquartz terminal and run this command to test it:
@@ -33,5 +33,5 @@ If you need platon to work with Olex², select the Home panel and then click on 
 To update to the latest version, run the following line in the terminal: 
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry-scripts/master/raw/update/platon.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry/master/raw/update/platon.sh)"
 ```
