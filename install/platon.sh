@@ -4,7 +4,7 @@
 #    you for some reason, leave a comment explaning what went wrong.
 #
 # You can run this automatically by opening the terminal and pasting the following line:
-#     /bin/bash -c "$(curl -fsSL https://gist.githubusercontent.com/sjml/e64b836fbc87730cc2ffa01a192160c5/raw/install-platon.sh)"
+#     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry/master/install/platon.sh)"
 #
 # If you don't want to pipe the internet right into your terminal, you can download this file,
 #    then in your terminal run "chmod +x <path to this file>" and thereafter just run it.

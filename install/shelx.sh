@@ -1,6 +1,15 @@
 #!/bin/bash
 
-set -e
+# This is a script that can be used to easily install SHELX on macOS. If it doesn't work for
+#    you for some reason, leave a comment explaning what went wrong.
+#
+# You can run this automatically by opening the terminal and pasting the following line:
+#     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/sjml/chemistry/master/install/shelx.sh)"
+#
+# If you don't want to pipe the internet right into your terminal, you can download this file,
+#    then in your terminal run "chmod +x <path to this file>" and thereafter just run it.
+#
+
 
 function wrap() {
   cols=$(tput cols)
@@ -48,29 +57,44 @@ if [[ $reg_check -ne "200" ]]; then
   exit 1
 fi
 
-mkdir -p shelx_tmp
+function err_func() {
+  {
+    echo
+    echo "ERROR"
+    echo
+    wrap "Something went wrong. Look at the messages above to see what it may have been. (You might have an extra folder hanging out called 'shelx_tmp'.)"
+    wrap "The script is safe to try again, though."
+  } 2>&1
+  exit 1
+}
 
-pushd shelx_tmp
+trap err_func ERR
 
-# wget would make this easier but I'm trying to avoid installing
-#    extra software
-for f in ${DL_FILE_LIST[@]}; do
-  curl --remote-name -u shelx:I43212 $DL_PATH$f
+  mkdir -p shelx_tmp
 
-  # just some mild throttling because this server
-  #    seems to get cranky if things happen too fast
-  sleep $(echo "scale=8; $RANDOM/32768" | bc)
-done
+  pushd shelx_tmp
 
-# extract everything that's compressed
-bunzip2 ./*.bz2
+  # wget would make this easier but I'm trying to avoid installing
+  #    extra software
+  for f in ${DL_FILE_LIST[@]}; do
+    curl --remote-name -u shelx:I43212 $DL_PATH$f
 
-# make it executable
-chmod ugo+x ./*
+    # just some mild throttling because this server
+    #    seems to get cranky if things happen too fast
+    sleep $(echo "scale=8; $RANDOM/32768" | bc)
+  done
 
-# put it on the path so it can be run
-mv ./* /usr/local/bin
+  # extract everything that's compressed
+  bunzip2 ./*.bz2
 
-popd
+  # make 'em executable
+  chmod ugo+x ./*
 
-rm -rf shelx_tmp
+  # put 'em on the path so they can be run
+  mv ./* /usr/local/bin
+
+  popd
+
+  rm -rf shelx_tmp
+
+trap - ERR
